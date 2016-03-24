@@ -1,0 +1,34 @@
+﻿
+@model Lab04MVC.Models.Person
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+Hi, I am @Model.FirstName @Model.LastName and I was born in @Model.BirthDate.Year
+<br />
+
+<div>
+    <form action="Test" method="post" id="checkit">
+        <div class="form-group">
+            <label for="firstname">First name: </label>
+            <input name="FirstName" class="form-control" type="text" id="firstname" value=""
+                   data-val="true"
+                   data-val-required="First name needed" />
+        </div>
+        <span data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+        <div class="form-group">
+            <label for="lastname">Last Name: </label>
+            <input type="text" class="form-control" name="lastname" id="lastname" value="" />
+        </div>
+        <div class="form-group">
+            <label for="dob">DOB: </label>
+            <input type="date" class="form-control" name="birthdate" id="BirthDate" value="" />
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
